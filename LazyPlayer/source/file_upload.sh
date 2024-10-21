@@ -10,7 +10,7 @@ echo -e "\e[1;32m       =========================\e[0m"
 working_directory="$(cd "$(dirname "$0")/.." && pwd)"
 
 get_local_ip() {
-    echo "$(ip addr show ens33 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)"
+    echo "$(ip addr show tun0 | grep 'inet ' | awk '{print $2}' | cut -d'/' -f1)"
 }
 
 generate_random_port() {
